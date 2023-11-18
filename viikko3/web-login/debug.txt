@@ -1,0 +1,195 @@
+==============================================================================
+20231117 18:25:03.421 - INFO - + START SUITE: Register [ ]
+==============================================================================
+20231117 18:25:03.421 - INFO - +- START SETUP: resource.Open And Configure Browser [ ]
+20231117 18:25:03.421 - INFO - +-- START KEYWORD: BuiltIn.Evaluate [ sys.modules['selenium.webdriver'].ChromeOptions() | sys ]
+20231117 18:25:03.422 - INFO - ${options} = <selenium.webdriver.chrome.options.Options object at 0x7fc12310b2f0>
+20231117 18:25:03.422 - INFO - +-- END KEYWORD: BuiltIn.Evaluate (1)
+20231117 18:25:03.422 - INFO - +-- START KEYWORD: SeleniumLibrary.Open Browser [ browser=chrome | options=${options} ]
+20231117 18:25:03.422 - INFO - Opening browser 'chrome' to base url 'None'.
+20231117 18:25:04.246 - DEBUG - Opened browser with session id 5b2d1b4817c775c13304113e1bbe6ff8.
+20231117 18:25:04.246 - INFO - +-- END KEYWORD: SeleniumLibrary.Open Browser (824)
+20231117 18:25:04.247 - INFO - +-- START KEYWORD: SeleniumLibrary.Set Selenium Speed [ ${DELAY} ]
+20231117 18:25:04.247 - INFO - +-- END KEYWORD: SeleniumLibrary.Set Selenium Speed (0)
+20231117 18:25:04.247 - INFO - +- END SETUP: resource.Open And Configure Browser (826)
+------------------------------------------------------------------------------
+20231117 18:25:04.247 - INFO - +- START TEST: Register With Valid Username And Password [ ]
+------------------------------------------------------------------------------
+20231117 18:25:04.248 - INFO - +-- START SETUP: resource.Go To Register Page [ ]
+20231117 18:25:04.248 - INFO - +--- START KEYWORD: SeleniumLibrary.Go To [ ${REGISTER_URL} ]
+20231117 18:25:04.248 - INFO - Opening url 'http://localhost:5001/register'
+20231117 18:25:04.303 - INFO - +--- END KEYWORD: SeleniumLibrary.Go To (55)
+20231117 18:25:04.303 - INFO - +-- END SETUP: resource.Go To Register Page (55)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.304 - INFO - +-- START KEYWORD: Set Username [ test ]
+20231117 18:25:04.304 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Text [ username | ${username} ]
+20231117 18:25:04.305 - INFO - Typing text 'test' into text field 'username'.
+20231117 18:25:04.364 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Text (60)
+20231117 18:25:04.364 - INFO - +-- END KEYWORD: Set Username (60)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.364 - INFO - +-- START KEYWORD: Set Password [ testing1 ]
+20231117 18:25:04.365 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Password [ password | ${password} ]
+20231117 18:25:04.365 - INFO - Typing password into text field 'password'.
+20231117 18:25:04.385 - INFO - Temporally setting log level to: NONE
+20231117 18:25:04.385 - INFO - Log level changed from INFO to NONE.
+20231117 18:25:04.406 - INFO - Log level changed from NONE to INFO.
+20231117 18:25:04.406 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Password (41)
+20231117 18:25:04.406 - INFO - +-- END KEYWORD: Set Password (42)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.407 - INFO - +-- START KEYWORD: Set Password confirmation [ testing1 ]
+20231117 18:25:04.407 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Password [ password_confirmation | ${password_confirmation} ]
+20231117 18:25:04.407 - INFO - Typing password into text field 'password_confirmation'.
+20231117 18:25:04.426 - INFO - Temporally setting log level to: NONE
+20231117 18:25:04.427 - INFO - Log level changed from INFO to NONE.
+20231117 18:25:04.448 - INFO - Log level changed from NONE to INFO.
+20231117 18:25:04.448 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Password (41)
+20231117 18:25:04.448 - INFO - +-- END KEYWORD: Set Password confirmation (42)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.448 - INFO - +-- START KEYWORD: Submit Credentials [ ]
+20231117 18:25:04.449 - INFO - +--- START KEYWORD: SeleniumLibrary.Click Button [ Register ]
+20231117 18:25:04.449 - INFO - Clicking button 'Register'.
+20231117 18:25:04.498 - INFO - +--- END KEYWORD: SeleniumLibrary.Click Button (49)
+20231117 18:25:04.499 - INFO - +-- END KEYWORD: Submit Credentials (50)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.499 - INFO - +-- START KEYWORD: Register Should Succeed [ ]
+20231117 18:25:04.499 - INFO - +--- START KEYWORD: resource.Welcome Page Should Be Open [ ]
+20231117 18:25:04.499 - INFO - +---- START KEYWORD: SeleniumLibrary.Title Should Be [ Welcome to Ohtu Application! ]
+20231117 18:25:04.505 - INFO - Page title is 'Welcome to Ohtu Application!'.
+20231117 18:25:04.505 - INFO - +---- END KEYWORD: SeleniumLibrary.Title Should Be (6)
+20231117 18:25:04.505 - INFO - +--- END KEYWORD: resource.Welcome Page Should Be Open (6)
+20231117 18:25:04.506 - INFO - +-- END KEYWORD: Register Should Succeed (6)
+------------------------------------------------------------------------------
+20231117 18:25:04.506 - INFO - +- END TEST: Register With Valid Username And Password (259)
+------------------------------------------------------------------------------
+20231117 18:25:04.506 - INFO - +- START TEST: Register With Too Short Username And Valid Password [ ]
+------------------------------------------------------------------------------
+20231117 18:25:04.506 - INFO - +-- START SETUP: resource.Go To Register Page [ ]
+20231117 18:25:04.507 - INFO - +--- START KEYWORD: SeleniumLibrary.Go To [ ${REGISTER_URL} ]
+20231117 18:25:04.507 - INFO - Opening url 'http://localhost:5001/register'
+20231117 18:25:04.522 - INFO - +--- END KEYWORD: SeleniumLibrary.Go To (15)
+20231117 18:25:04.522 - INFO - +-- END SETUP: resource.Go To Register Page (16)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.522 - INFO - +-- START KEYWORD: Set Username [ te ]
+20231117 18:25:04.523 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Text [ username | ${username} ]
+20231117 18:25:04.523 - INFO - Typing text 'te' into text field 'username'.
+20231117 18:25:04.563 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Text (40)
+20231117 18:25:04.563 - INFO - +-- END KEYWORD: Set Username (41)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.563 - INFO - +-- START KEYWORD: Set Password [ testing111 ]
+20231117 18:25:04.564 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Password [ password | ${password} ]
+20231117 18:25:04.564 - INFO - Typing password into text field 'password'.
+20231117 18:25:04.582 - INFO - Temporally setting log level to: NONE
+20231117 18:25:04.582 - INFO - Log level changed from INFO to NONE.
+20231117 18:25:04.606 - INFO - Log level changed from NONE to INFO.
+20231117 18:25:04.606 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Password (42)
+20231117 18:25:04.606 - INFO - +-- END KEYWORD: Set Password (43)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.607 - INFO - +-- START KEYWORD: Set Password confirmation [ testing111 ]
+20231117 18:25:04.607 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Password [ password_confirmation | ${password_confirmation} ]
+20231117 18:25:04.607 - INFO - Typing password into text field 'password_confirmation'.
+20231117 18:25:04.624 - INFO - Temporally setting log level to: NONE
+20231117 18:25:04.624 - INFO - Log level changed from INFO to NONE.
+20231117 18:25:04.645 - INFO - Log level changed from NONE to INFO.
+20231117 18:25:04.645 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Password (38)
+20231117 18:25:04.645 - INFO - +-- END KEYWORD: Set Password confirmation (38)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.645 - INFO - +-- START KEYWORD: Submit Credentials [ ]
+20231117 18:25:04.645 - INFO - +--- START KEYWORD: SeleniumLibrary.Click Button [ Register ]
+20231117 18:25:04.646 - INFO - Clicking button 'Register'.
+20231117 18:25:04.682 - INFO - +--- END KEYWORD: SeleniumLibrary.Click Button (37)
+20231117 18:25:04.682 - INFO - +-- END KEYWORD: Submit Credentials (37)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.683 - INFO - +-- START KEYWORD: Register Should Fail With Message [ Username invalid ]
+20231117 18:25:04.683 - INFO - +--- START KEYWORD: resource.Register Page Should Be Open [ ]
+20231117 18:25:04.683 - INFO - +---- START KEYWORD: SeleniumLibrary.Go To [ ${REGISTER_URL} ]
+20231117 18:25:04.683 - INFO - Opening url 'http://localhost:5001/register'
+20231117 18:25:04.696 - INFO - +---- END KEYWORD: SeleniumLibrary.Go To (13)
+20231117 18:25:04.696 - INFO - +--- END KEYWORD: resource.Register Page Should Be Open (13)
+20231117 18:25:04.696 - INFO - +--- START KEYWORD: SeleniumLibrary.Page Should Contain [ ${message} ]
+20231117 18:25:04.712 - DEBUG - Current frame has 0 subframes.
+20231117 18:25:04.822 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-15.png"><img src="selenium-screenshot-15.png" width="800px"></a>
+20231117 18:25:04.822 - FAIL - Page should have contained text 'Username invalid' but did not.
+20231117 18:25:04.824 - DEBUG - Traceback (most recent call last):
+  File "/home/rellen/palautusrepositorio_ohtu/viikko3/web-login/.venv/lib/python3.12/site-packages/SeleniumLibrary/__init__.py", line 517, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rellen/palautusrepositorio_ohtu/viikko3/web-login/.venv/lib/python3.12/site-packages/robotlibcore.py", line 126, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rellen/palautusrepositorio_ohtu/viikko3/web-login/.venv/lib/python3.12/site-packages/SeleniumLibrary/keywords/element.py", line 138, in page_should_contain
+    raise AssertionError(
+AssertionError: Page should have contained text 'Username invalid' but did not.
+20231117 18:25:04.824 - INFO - +--- END KEYWORD: SeleniumLibrary.Page Should Contain (128)
+20231117 18:25:04.824 - INFO - +-- END KEYWORD: Register Should Fail With Message (142)
+------------------------------------------------------------------------------
+20231117 18:25:04.824 - INFO - +- END TEST: Register With Too Short Username And Valid Password (318)
+------------------------------------------------------------------------------
+20231117 18:25:04.824 - INFO - +- START TEST: Register With Valid Username And Invalid Password [ ]
+------------------------------------------------------------------------------
+20231117 18:25:04.824 - INFO - +-- START SETUP: resource.Go To Register Page [ ]
+20231117 18:25:04.825 - INFO - +--- START KEYWORD: SeleniumLibrary.Go To [ ${REGISTER_URL} ]
+20231117 18:25:04.825 - INFO - Opening url 'http://localhost:5001/register'
+20231117 18:25:04.837 - INFO - +--- END KEYWORD: SeleniumLibrary.Go To (12)
+20231117 18:25:04.837 - INFO - +-- END SETUP: resource.Go To Register Page (13)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.837 - INFO - +-- START KEYWORD: Set Username [ moi ]
+20231117 18:25:04.837 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Text [ username | ${username} ]
+20231117 18:25:04.838 - INFO - Typing text 'moi' into text field 'username'.
+20231117 18:25:04.874 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Text (37)
+20231117 18:25:04.875 - INFO - +-- END KEYWORD: Set Username (37)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.875 - INFO - +-- START KEYWORD: Set Password [ moi1 ]
+20231117 18:25:04.875 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Password [ password | ${password} ]
+20231117 18:25:04.875 - INFO - Typing password into text field 'password'.
+20231117 18:25:04.893 - INFO - Temporally setting log level to: NONE
+20231117 18:25:04.893 - INFO - Log level changed from INFO to NONE.
+20231117 18:25:04.913 - INFO - Log level changed from NONE to INFO.
+20231117 18:25:04.913 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Password (38)
+20231117 18:25:04.913 - INFO - +-- END KEYWORD: Set Password (38)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.913 - INFO - +-- START KEYWORD: Set Password confirmation [ moi1 ]
+20231117 18:25:04.913 - INFO - +--- START KEYWORD: SeleniumLibrary.Input Password [ password_confirmation | ${password_confirmation} ]
+20231117 18:25:04.914 - INFO - Typing password into text field 'password_confirmation'.
+20231117 18:25:04.930 - INFO - Temporally setting log level to: NONE
+20231117 18:25:04.930 - INFO - Log level changed from INFO to NONE.
+20231117 18:25:04.951 - INFO - Log level changed from NONE to INFO.
+20231117 18:25:04.951 - INFO - +--- END KEYWORD: SeleniumLibrary.Input Password (38)
+20231117 18:25:04.951 - INFO - +-- END KEYWORD: Set Password confirmation (38)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.951 - INFO - +-- START KEYWORD: Submit Credentials [ ]
+20231117 18:25:04.952 - INFO - +--- START KEYWORD: SeleniumLibrary.Click Button [ Register ]
+20231117 18:25:04.952 - INFO - Clicking button 'Register'.
+20231117 18:25:04.990 - INFO - +--- END KEYWORD: SeleniumLibrary.Click Button (37)
+20231117 18:25:04.990 - INFO - +-- END KEYWORD: Submit Credentials (39)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+20231117 18:25:04.990 - INFO - +-- START KEYWORD: Register Should Fail With Message [ Invalid password ]
+20231117 18:25:04.990 - INFO - +--- START KEYWORD: resource.Register Page Should Be Open [ ]
+20231117 18:25:04.990 - INFO - +---- START KEYWORD: SeleniumLibrary.Go To [ ${REGISTER_URL} ]
+20231117 18:25:04.990 - INFO - Opening url 'http://localhost:5001/register'
+20231117 18:25:05.002 - INFO - +---- END KEYWORD: SeleniumLibrary.Go To (12)
+20231117 18:25:05.003 - INFO - +--- END KEYWORD: resource.Register Page Should Be Open (12)
+20231117 18:25:05.003 - INFO - +--- START KEYWORD: SeleniumLibrary.Page Should Contain [ ${message} ]
+20231117 18:25:05.016 - DEBUG - Current frame has 0 subframes.
+20231117 18:25:05.118 - INFO - </td></tr><tr><td colspan="3"><a href="selenium-screenshot-16.png"><img src="selenium-screenshot-16.png" width="800px"></a>
+20231117 18:25:05.118 - FAIL - Page should have contained text 'Invalid password' but did not.
+20231117 18:25:05.118 - DEBUG - Traceback (most recent call last):
+  File "/home/rellen/palautusrepositorio_ohtu/viikko3/web-login/.venv/lib/python3.12/site-packages/SeleniumLibrary/__init__.py", line 517, in run_keyword
+    return DynamicCore.run_keyword(self, name, args, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rellen/palautusrepositorio_ohtu/viikko3/web-login/.venv/lib/python3.12/site-packages/robotlibcore.py", line 126, in run_keyword
+    return self.keywords[name](*args, **(kwargs or {}))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/rellen/palautusrepositorio_ohtu/viikko3/web-login/.venv/lib/python3.12/site-packages/SeleniumLibrary/keywords/element.py", line 138, in page_should_contain
+    raise AssertionError(
+AssertionError: Page should have contained text 'Invalid password' but did not.
+20231117 18:25:05.118 - INFO - +--- END KEYWORD: SeleniumLibrary.Page Should Contain (115)
+20231117 18:25:05.118 - INFO - +-- END KEYWORD: Register Should Fail With Message (128)
+------------------------------------------------------------------------------
+20231117 18:25:05.119 - INFO - +- END TEST: Register With Valid Username And Invalid Password (294)
+------------------------------------------------------------------------------
+20231117 18:25:05.119 - INFO - +- START TEARDOWN: SeleniumLibrary.Close Browser [ ]
+20231117 18:25:05.119 - DEBUG - Closing browser with session id 5b2d1b4817c775c13304113e1bbe6ff8.
+20231117 18:25:05.180 - INFO - +- END TEARDOWN: SeleniumLibrary.Close Browser (61)
+==============================================================================
+20231117 18:25:05.181 - INFO - + END SUITE: Register (1861)
+==============================================================================

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on linux)" generated="20231117 08:57:10.040" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="/home/rellen/.vscode/extensions/robocorp.robotframework-lsp-1.11.0/src/robotframework_ls/vendored/robotframework_interactive/robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Counter Value Should Be">
+<arg>0</arg>
+<msg timestamp="20231117 08:57:10.616" level="FAIL">No keyword with name 'Counter Value Should Be' found.</msg>
+<status status="FAIL" starttime="20231117 08:57:10.616" endtime="20231117 08:57:10.616"/>
+</kw>
+<kw name="Increase Counter">
+<status status="NOT RUN" starttime="20231117 08:57:10.618" endtime="20231117 08:57:10.618"/>
+</kw>
+<kw name="Counter Value Should Be">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231117 08:57:10.619" endtime="20231117 08:57:10.619"/>
+</kw>
+<status status="PASS" starttime="20231117 08:57:10.053" endtime="20231117 08:58:02.538"/>
+</kw>
+<status status="PASS" starttime="20231117 08:57:10.053" endtime="20231117 08:58:02.539"/>
+</test>
+<status status="PASS" starttime="20231117 08:57:10.041" endtime="20231117 08:58:02.539"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
